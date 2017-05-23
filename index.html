@@ -10,32 +10,11 @@
 
 <body>
   <div id="vue-app">
-    <p>{{ greet('afternoon') }}</p>
-    <p>{{first_name}}</p>
-    <p>{{last_name}}</p>
-
-    <a v-bind:href="website">{{website}}</a>
-    <br><br>
-    <a :href="website">{{website}}</a>
-
-    <br><br>
-    <input type="text" v-bind:value="website">
-
-    <br>
-    <p v-html="websiteTag"></p>
-
-    <h1>Events</h1>
-      <button @click="addAge(1)">Add a Year</button>
-      <button v-on:click.once="subtractAge(1)">Substract a Year</button>
-
-      <button v-on:dblclick="addAge(10)">Add 10 Year</button>
-      <button v-on:dblclick="subtractAge(10)">Substract 10 Year</button>
-      <p>My age is {{age}}</p>
-      <div id="canvas" v-on:mousemove="updateXY">
-        {{x}}, {{y}}
-       </div>
-       <br>
-       <a v-on:click.prevent="click" href="http://www.iuliantabara.com">Iulian Tabara</a>
+    <h1>Keyboard Events</h1>
+    <label>Name:</label>
+    <input type="text" v-on:keyup.enter="logName">
+    <label>Age:</label>
+    <input type="text" v-on:keyup.alt.enter="logAge">
   </div>
 
   <script src="app.js"></script>
