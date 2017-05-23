@@ -1,6 +1,8 @@
 new Vue({
   el:'#vue-app',
   data:{
+    txt_name: '',
+    txt_age: ''
   },
   methods: {
     logName: function(){
