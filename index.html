@@ -26,7 +26,7 @@
 
     <h1>Events</h1>
       <button @click="addAge(1)">Add a Year</button>
-      <button v-on:click="subtractAge(1)">Substract a Year</button>
+      <button v-on:click.once="subtractAge(1)">Substract a Year</button>
 
       <button v-on:dblclick="addAge(10)">Add 10 Year</button>
       <button v-on:dblclick="subtractAge(10)">Substract 10 Year</button>
@@ -34,6 +34,8 @@
       <div id="canvas" v-on:mousemove="updateXY">
         {{x}}, {{y}}
        </div>
+       <br>
+       <a v-on:click.prevent="click" href="http://www.iuliantabara.com">Iulian Tabara</a>
   </div>
 
   <script src="app.js"></script>
